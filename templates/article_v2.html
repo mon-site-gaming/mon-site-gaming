@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="google-site-verification" content="MjaJeZGyI_CNEvg-2nFsrhpJWlfRFZU9PBVvvZJIocM" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGHGG91FC6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GGHGG91FC6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #171a23;
+            --border: #262b38;
+            --text: #f4f5f7;
+            --text-muted: #9aa1b1;
+            --accent: #7c5cff;
+            --accent-soft: rgba(124, 92, 255, 0.12);
+            --accent-hover: #6a4ce6;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+        nav {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 17, 23, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+        .logo { font-weight: 800; font-size: 19px; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: var(--accent); }
+
+        article { padding: 44px 0 20px; }
+        h1 { font-size: 30px; font-weight: 800; line-height: 1.25; margin: 0 0 10px; letter-spacing: -0.02em; }
+        .meta { color: var(--text-muted); font-size: 13.5px; margin-bottom: 28px; }
+
+        .disclosure {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .content p { margin: 0 0 18px; font-size: 16px; color: #dcdfe6; }
+        .content h2 { font-size: 21px; font-weight: 700; margin: 32px 0 14px; letter-spacing: -0.01em; }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--accent-soft), rgba(124, 92, 255, 0.05));
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin: 36px 0 20px;
+            text-align: center;
+        }
+        .cta-box p { color: var(--text); font-weight: 600; margin: 0 0 16px; font-size: 16px; }
+        .cta-box a {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 13px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: background 0.15s ease;
+        }
+        .cta-box a:hover { background: var(--accent-hover); }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0 32px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        footer a { color: var(--text-muted); }
+
+        @media (max-width: 480px) {
+            article { padding: 32px 0 16px; }
+            h1 { font-size: 24px; }
+            .cta-box { padding: 22px 18px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="wrap"><a class="logo" href="index.html">💻 {{SITE_NAME_PART1}}<span>{{SITE_NAME_PART2}}</span></a></nav>
+
+    <div class="wrap">
+        <article>
+            <h1>{{TITLE}}</h1>
+            <div class="meta">Published on {{DATE}}</div>
+
+            <div class="disclosure">
+                This article contains affiliate links. If you buy through these links, we may earn a small commission at no extra cost to you.
+            </div>
+
+            <div class="content">
+                {{CONTENT}}
+            </div>
+
+            <div class="cta-box">
+                <p>{{CTA_TEXT}}</p>
+                <a href="{{AFFILIATE_LINK}}" rel="nofollow sponsored" target="_blank">{{CTA_BUTTON_TEXT}}</a>
+            </div>
+        </article>
+
+        <footer>
+            &copy; {{YEAR}} {{SITE_NAME}} — <a href="index.html">Back to home</a>
+        </footer>
+    </div>
+</body>
+</html>
